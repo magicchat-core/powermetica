@@ -1,8 +1,8 @@
 {
-  "name": "chathead-landing-next",
+  "name": "powermetica",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://codekeep18feb.github.io/chathead-landing-next",
+  "homepage": "https://magicchat-core.github.io/powermetica",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
