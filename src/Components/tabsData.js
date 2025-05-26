@@ -1,63 +1,100 @@
-// const tabsData = [
-//     {
-//       label: "Home",
-//       content: <p>Welcome to the home tab content!</p>,
-//     },
-//     {
-//       label: "Profile",
-//       content: (
-//         <div>
-//           <h3>User Profile</h3>
-//           <p>This is your profile info.</p>
-//         </div>
-//       ),
-//     },
-//     {
-//       label: "Settings",
-//       content: (
-//         <div>
-//           <h3>Settings</h3>
-//           <p>Manage your preferences here.</p>
-//         </div>
-//       ),
-//     },
-//   ];
-
+import styles from "./Tabs.module.css";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const tabsData = [
-    {
-      label: "Home",
-      content: (
-        <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-          {["Box 1", "Box 2", "Box 3", "Box 4"].map((boxLabel) => (
+  {
+    label: "Front-end",
+    content: (
+      <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+        {/* {["Box 1", "Box 2", "Box 3", "Box 4"].map((boxLabel) => (
             <button key={boxLabel} className="box-button">
               {boxLabel}
             </button>
-          ))}
-        </div>
-      ),
-    },
-    {
-      label: "Profile",
-      content: (
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          {["Link A", "Link B", "Link C"].map((linkLabel) => (
+          ))} */}
+
+        {[
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Vue.js",
+          "React.js",
+          "Angular",
+          "Next.js",
+          "Bootstrap",
+          "Material UI (MUI)",
+          "Tailwind CSS",
+        ].map((linkLabel) => (
+          <a
+            key={linkLabel}
+            href="#"
+            className={styles["box-link"]}
+            onClick={(e) => e.preventDefault()}
+          >
+            <IoMdCheckmarkCircleOutline
+              style={{ marginRight: "8px", color: "green", fontSize: "30px" }}
+            />
+            {linkLabel}
+          </a>
+        ))}
+      </div>
+    ),
+  },
+  {
+    label: "Back-end",
+    content: (
+      <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+        {[
+          "Python",
+          "Java ",
+          "JavaScript",
+          "C#",
+          "PHP",
+          "Ruby",
+          "Node.js",
+          "Express.js",
+          "Django",
+          "FastAPI",
+          "Laravel",
+        ].map((linkLabel) => (
+          <a
+            key={linkLabel}
+            href="#"
+            className={styles["box-link"]}
+            onClick={(e) => e.preventDefault()}
+          >
+            <IoMdCheckmarkCircleOutline
+              style={{ marginRight: "8px", color: "green", fontSize: "30px" }}
+            />
+
+            {linkLabel}
+          </a>
+        ))}
+      </div>
+    ),
+  },
+  {
+    label: "Database",
+    content: (
+      <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+        {["MySql", "MongoDB  ", "PostgreSQL", "Cassandra", "AWS Aurora"].map(
+          (linkLabel) => (
             <a
               key={linkLabel}
               href="#"
-              className="box-link"
+              className={styles["box-link"]}
               onClick={(e) => e.preventDefault()}
             >
+              <IoMdCheckmarkCircleOutline
+                style={{ marginRight: "8px", color: "green", fontSize: "30px" }}
+              />
+
               {linkLabel}
             </a>
-          ))}
-        </div>
-      ),
-    },
-    {
-      label: "Settings",
-      content: <p>Manage your preferences here.</p>,
-    },
-  ];
+          )
+        )}
+      </div>
+    ),
+  },
+];
 
-  export default tabsData
+export default tabsData;

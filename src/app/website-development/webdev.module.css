@@ -1,0 +1,14 @@
+.tabWrap {
+  background: var(--dark-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.cardWrap {
+  padding: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

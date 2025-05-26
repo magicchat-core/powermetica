@@ -7,6 +7,8 @@ import Tabs from "@/Components/Tabs";
 import tabsData from "@/Components/tabsData";
 import faqItems from "@/Components/faqItems";
 import Card from "../../Components/Card";
+import webdev from "./webdev.module.css";
+import cardData from "@/Components/cardData";
 
 const LightningIcon = () => (
   <svg
@@ -42,41 +44,17 @@ const WebsiteDevelopment = () => {
         onButtonClick={bannerData.onButtonClick}
       />
 
-      <br />
-      <div>
-        <section>
-          <Tabs tabs={tabsData} />
-        </section>
-      </div>
+      <section className={webdev.tabWrap}>
+        <Tabs tabs={tabsData} />
+      </section>
 
-      <br />
+      <section className={webdev.cardWrap}>
+        {cardData.map((props, index) => (
+          <Card key={index} {...props} />
+        ))}
+      </section>
 
       <FAQ items={faqItems} />
-
-      <main
-        style={{
-          padding: "40px",
-          display: "flex",
-          gap: "20px",
-          flexWrap: "wrap",
-        }}
-      >
-        <Card
-          title="Fast Performance"
-          text="Optimized for speed and efficiency."
-          Icon={LightningIcon}
-        />
-        <Card
-          title="Reliable Uptime"
-          text="Stable and consistent experience."
-          Icon={LightningIcon}
-        />
-        <Card
-          title="Easy Integration"
-          text="Simple to connect and deploy."
-          Icon={LightningIcon}
-        />
-      </main>
     </div>
   );
 };
