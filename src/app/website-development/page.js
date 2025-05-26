@@ -1,4 +1,4 @@
-"use client"; // add this at the top of WebsiteDevelopment.js
+"use client";
 
 import React from "react";
 import Banner from "@/Components/Banner";
@@ -7,8 +7,6 @@ import Tabs from "@/Components/Tabs";
 import tabsData from "@/Components/tabsData";
 import faqItems from "@/Components/faqItems";
 import Card from "../../Components/Card";
-
-
 
 const LightningIcon = () => (
   <svg
@@ -22,20 +20,19 @@ const LightningIcon = () => (
   </svg>
 );
 
-
 const WebsiteDevelopment = () => {
   const bannerData = {
-    title: "Grow Your Business Today",
-    description: "We provide powerful solutions to help you scale faster.",
+    title: "Dynamic Web Development Services",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     image1: "/Asset/shap.png",
     image2: "/Asset/shape2.png",
-    buttonText: "Get Started",
+    buttonText: "Talk to us",
     onButtonClick: () => alert("Let’s go!"),
   };
 
   return (
-    <div>
-      WebsiteDevelopment
+    <div style={{ backgroundColor: "#121723" }}>
       <Banner
         title={bannerData.title}
         description={bannerData.description}
@@ -45,35 +42,41 @@ const WebsiteDevelopment = () => {
         onButtonClick={bannerData.onButtonClick}
       />
 
-      <br/>
+      <br />
       <div>
         <section>
           <Tabs tabs={tabsData} />
-        </section>  
+        </section>
       </div>
 
-  <br/>
+      <br />
 
-  <FAQ items={faqItems}/>
+      <FAQ items={faqItems} />
 
-
-  <main style={{ padding: "40px", display: "flex", gap: "20px", flexWrap: "wrap" }}>
-      <Card
-        title="Fast Performance"
-        text="Optimized for speed and efficiency."
-        Icon={LightningIcon}
-      />
-      <Card
-        title="Reliable Uptime"
-        text="Stable and consistent experience."
-        Icon={LightningIcon}
-      />
-      <Card
-        title="Easy Integration"
-        text="Simple to connect and deploy."
-        Icon={LightningIcon}
-      />
-    </main>
+      <main
+        style={{
+          padding: "40px",
+          display: "flex",
+          gap: "20px",
+          flexWrap: "wrap",
+        }}
+      >
+        <Card
+          title="Fast Performance"
+          text="Optimized for speed and efficiency."
+          Icon={LightningIcon}
+        />
+        <Card
+          title="Reliable Uptime"
+          text="Stable and consistent experience."
+          Icon={LightningIcon}
+        />
+        <Card
+          title="Easy Integration"
+          text="Simple to connect and deploy."
+          Icon={LightningIcon}
+        />
+      </main>
     </div>
   );
 };
