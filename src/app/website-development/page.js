@@ -6,7 +6,7 @@ import FAQ from "@/Components/FAQ";
 import Tabs from "@/Components/Tabs";
 import tabsData from "@/Components/tabsData";
 import faqItems from "@/Components/faqItems";
-import Card from "../Card";
+import Card from "../../Components/Card";
 
 
 
@@ -27,8 +27,8 @@ const WebsiteDevelopment = () => {
   const bannerData = {
     title: "Grow Your Business Today",
     description: "We provide powerful solutions to help you scale faster.",
-    image1: "/img1.jpg",
-    image2: "/img2.jpg",
+    image1: "/Asset/shap.png",
+    image2: "/Asset/shape2.png",
     buttonText: "Get Started",
     onButtonClick: () => alert("Let’s go!"),
   };
@@ -49,7 +49,7 @@ const WebsiteDevelopment = () => {
       <div>
         <section>
           <Tabs tabs={tabsData} />
-        </section>
+        </section>  
       </div>
 
   <br/>

@@ -1,3 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #FF6600;
+  --secondary-color: #9AF50A;
+  --subSecondary-text: #B5B0BC;
+  --light-text: #b5b0bc;
+  --dark-text: #060505;
+  --white-color: #fff;
+  --bg_color: #121723;
+  --primary-gradient: linear-gradient(15deg, #edf2fb 0%, #4a7feb 100%);
+
+  /* --primary-gradient: linear-gradient(to right, #EDF2FB, #4A7FEB); */
+  /* --primary-gradient: linear-gradient(90deg, #4A7FEB 0%, #03142A 100%); */
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
