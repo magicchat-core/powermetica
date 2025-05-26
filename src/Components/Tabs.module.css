@@ -1,0 +1,91 @@
+.tabsContainer {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tabList {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .tabButton {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  .tabButton:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .tabButton:focus {
+    outline: none;
+    border-bottom: 3px solid #0070f3;
+  }
+  
+  .active {
+    border-bottom: 3px solid #0070f3;
+    font-weight: bold;
+    color: #0070f3;
+  }
+  
+  .tabPanel {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+  }
+  .tabPanel {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none; /* so it connects nicely under the tab buttons */
+    min-height: 150px; /* ensures consistent height */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    border-radius: 0 0 6px 6px; /* slightly rounded bottom corners */
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  }
+  .box-button {
+    padding: 16px 24px;
+    border: 2px solid #0070f3;
+    background: white;
+    color: #0070f3;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+    flex: 1 1 120px;
+    text-align: center;
+    user-select: none;
+  }
+  .box-button:hover {
+    background-color: #0070f3;
+    color: white;
+  }
+  .box-link {
+    padding: 14px 20px;
+    border: 2px dashed #ff4081;
+    color: #ff4081;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    flex: 1 1 100px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.25s, color 0.25s;
+    user-select: none;
+  }
+  .box-link:hover {
+    background-color: #ff4081;
+    color: white;
+    text-decoration: none;
+  }  
