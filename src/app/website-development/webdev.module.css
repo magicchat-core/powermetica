@@ -1,0 +1,36 @@
+.tabWrap {
+  background: var(--dark-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8rem;
+}
+
+.cardWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 8rem;
+}
+.cardsHeading {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+.cardsHeading h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 3.5rem;
+  line-height: 28px;
+  color: var(--subSecondary-text);
+}
+.allCards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
