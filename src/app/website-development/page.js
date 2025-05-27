@@ -49,9 +49,20 @@ const WebsiteDevelopment = () => {
       </section>
 
       <section className={webdev.cardWrap}>
+        <div className={webdev.cardsHeading}>
+          <h2>Our Web Development Process</h2>
+          <p className={webdev.description}>
+            We understand that every web development project is unique, and
+            tailor our approach to meet your specific needs. Our development
+            process is built on collaboration, creativity, and cutting-edge
+            technology.
+          </p>
+        </div>
+        <div className={webdev.allCards}>
         {cardData.map((props, index) => (
           <Card key={index} {...props} />
         ))}
+        </div>
       </section>
 
       <FAQ items={faqItems} />
