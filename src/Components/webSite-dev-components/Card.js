@@ -1,5 +1,5 @@
 import styles from "./Card.module.css";
-import VectorShape from "../../public/assets/icons/vectorShape.svg";
+import VectorShape from "../../../public/assets/icons/vectorShape.svg";
 
 console.log("VectorShape", VectorShape);
 

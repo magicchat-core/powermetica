@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import Banner from "@/Components/Banner";
-import FAQ from "@/Components/FAQ";
-import Tabs from "@/Components/Tabs";
-import tabsData from "@/Components/tabsData";
-import faqItems from "@/Components/faqItems";
-import Card from "../../Components/Card";
+import Banner from "@/Components/webSite-dev-components/Banner";
+import FAQ from "@/Components/webSite-dev-components/FAQ";
+import Tabs from "@/Components/webSite-dev-components/Tabs";
+import tabsData from "@/Components/webSite-dev-components/tabsData";
+import faqItems from "@/Components/webSite-dev-components/faqItems";
+import Card from "../../Components/webSite-dev-components/Card";
 import webdev from "./webdev.module.css";
-import cardData from "@/Components/cardData";
+import cardData from "@/Components/webSite-dev-components/cardData";
 
 const LightningIcon = () => (
   <svg
