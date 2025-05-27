@@ -2,13 +2,13 @@
   "name": "powermetica",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://magicchat-core.github.io/powermetica",
+"homepage": "https://magicchat-core.github.io/powermetica",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && touch ./out/.nojekyll && gh-pages -d out -t true"
+    "deploy": "npm run build && echo 'www.powermetica.com' > out/CNAME && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
