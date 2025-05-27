@@ -1,18 +1,38 @@
 const faqItems = [
     {
-      question: "What is Next.js?",
+      question: "What is the difference between web development and web design?",
       answer:
-        "Next.js is a React framework for production that provides hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     },
     {
-      question: "How do I use CSS Modules in Next.js?",
+      question: "How long does it take to develop a web application?",
       answer:
-        "You create a `.module.css` file, import it into your component, and apply styles via the imported object. This scopes styles locally by default.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     },
     {
-      question: "Can I make the FAQ open multiple items at once?",
+      question: "What technologies do you use for web application development?",
       answer:
-        "The current implementation allows only one open item at a time. You can modify the logic to support multiple open items if needed.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    },
+    {
+      question: "How do you ensure the security of web applications?",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    },
+    {
+      question: "What is the cost of web development services?",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    },
+    {
+      question: "Do you provide ongoing support and maintenance?",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    },
+    {
+      question: "What are web development services? ",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     },
   ];
 

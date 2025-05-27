@@ -41,7 +41,7 @@
 }
 
 .button:hover {
-  background-color: #005bb5;
+  background-color: var(--primary-color);
 }
 
 .imageSection {
