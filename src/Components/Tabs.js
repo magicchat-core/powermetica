@@ -41,7 +41,7 @@ export default function Tabs({ tabs }) {
       </div>
 
       <div className={styles.imageWrapper}>
-        <img src="/Asset/shap.png"/>
+        <img src="/assets/icons/shap.png"/>
       </div>
     </>
   );
