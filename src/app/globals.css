@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,10 @@
   --dark-text: #060505;
   --white-color: #fff;
   --bg_color: #121723;
-  --primary-gradient: linear-gradient(15deg, #edf2fb 0%, #4a7feb 100%);
+  --primary-gradient: linear-gradient(90deg, #FF6600 0%, #9AF50A 100%);
+  --secondary-gradient: linear-gradient(90deg, #06050525 0%, #2c2c2c 50%, #06050525 100%);
+  --sub-gradient: linear-gradient(to top, #06050525 0%, #2c2c2c 50%, #06050525 100%);
+
 
   /* --primary-gradient: linear-gradient(to right, #EDF2FB, #4A7FEB); */
   /* --primary-gradient: linear-gradient(90deg, #4A7FEB 0%, #03142A 100%); */

@@ -1,0 +1,107 @@
+.wrapper {
+  width: 100%;
+  height: auto;
+  padding: 3rem 8rem;
+  text-align: center;
+}
+.heading {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+.heading h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 3.5rem;
+  line-height: 28px;
+  color: var(--subSecondary-text);
+}
+.cardWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.verticalDivider1,
+.verticalDivider2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--sub-gradient);
+  z-index: 1;
+}
+
+.verticalDivider1 {
+  left: 33.3333%;
+}
+
+.verticalDivider2 {
+  left: 66.6666%;
+}
+.row,
+.secondRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+}
+
+.box {
+  text-align: left;
+  flex: 1;
+  padding: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-number {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 128px;
+  display: flex;
+  gap: 4px;
+  line-height: 1;
+  opacity: 0.2;
+  position: relative;
+}
+
+.card-number span {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.cardheading {
+  font-size: 32px;
+  font-weight: lighter;
+  color: var(--white-color);
+  position: absolute;
+  top: 32%;
+  max-width: 270px;
+}
+
+.horizontaldivider {
+  width: 100%;
+  height: 1px;
+  background: var(--secondary-gradient);
+  margin: 24px 0;
+}
+
+.cardDesc {
+  color: var(--subSecondary-text);
+  line-height: 1.5;
+  margin-top: 10px;
+}
+.cardheading {
+  font-size: 30px;
+  font-weight: lighter;
+}

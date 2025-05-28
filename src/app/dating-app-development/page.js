@@ -5,6 +5,7 @@ import Banner from "@/Components/webSite-dev-components/Banner";
 import FAQ from "@/Components/webSite-dev-components/FAQ";
 import datingfaqItems from "@/Components/datingApp-components/datingfaqItems";
 import CustomDatingApp from "@/Components/datingApp-components/CustomDatingApp";
+import TimeTestedComp from "@/Components/datingApp-components/TimeTestedComp";
 
 const datingAppDevelopment = () => {
   const bannerData = {
@@ -29,6 +30,8 @@ const datingAppDevelopment = () => {
       />
 
       <CustomDatingApp />
+
+      <TimeTestedComp/>
 
       <FAQ items={datingfaqItems} />
     </div>
