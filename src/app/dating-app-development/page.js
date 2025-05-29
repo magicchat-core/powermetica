@@ -6,6 +6,9 @@ import FAQ from "@/Components/webSite-dev-components/FAQ";
 import datingfaqItems from "@/Components/datingApp-components/datingfaqItems";
 import CustomDatingApp from "@/Components/datingApp-components/CustomDatingApp";
 import TimeTestedComp from "@/Components/datingApp-components/TimeTestedComp";
+import Card from "@/Components/datingApp-components/Card";
+import datingSty from "./datingApp.module.css";
+import cardData from "@/Components/datingApp-components/cardData";
 
 const datingAppDevelopment = () => {
   const bannerData = {
@@ -31,7 +34,37 @@ const datingAppDevelopment = () => {
 
       <CustomDatingApp />
 
-      <TimeTestedComp/>
+      <TimeTestedComp />
+
+      <section className={datingSty.cardWrap}>
+        <div className={datingSty.cardsHeading}>
+          <h2>Our Web Development Process</h2>
+          <p className={datingSty.description}>
+            We understand that every web development project is unique, and
+            tailor our approach to meet your specific needs. Our development
+            process is built on collaboration, creativity, and cutting-edge
+            technology.
+          </p>
+        </div>
+
+        <div className={datingSty.allCards}>
+          <div className={datingSty.firstCard}>
+            {cardData.slice(0, 3).map((props, index) => (
+              <Card key={index} {...props} />
+            ))}
+          </div>
+
+          <img
+          src="/assets/img/man_with_laptop.png"
+          alt="custom-dating-banner"
+        />
+          <div className={datingSty.remainingCards}>
+            {cardData.slice(3, 6).map((props, index) => (
+              <Card key={index + 1} {...props} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       <FAQ items={datingfaqItems} />
     </div>
