@@ -9,6 +9,7 @@ import TimeTestedComp from "@/Components/datingApp-components/TimeTestedComp";
 import Card from "@/Components/datingApp-components/Card";
 import datingSty from "./datingApp.module.css";
 import cardData from "@/Components/datingApp-components/cardData";
+import WhyChooseMagicChat from "@/Components/datingApp-components/WhyChooseMagicChat";
 
 const datingAppDevelopment = () => {
   const bannerData = {
@@ -65,6 +66,8 @@ const datingAppDevelopment = () => {
           </div>
         </div>
       </section>
+
+      <WhyChooseMagicChat/>
 
       <FAQ items={datingfaqItems} />
     </div>

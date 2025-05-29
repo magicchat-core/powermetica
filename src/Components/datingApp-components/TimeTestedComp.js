@@ -1,5 +1,5 @@
 import styles from "./TimeTested.module.css";
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+
 
 const cardsData = [
   {
