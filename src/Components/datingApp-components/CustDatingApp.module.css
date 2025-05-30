@@ -1,0 +1,109 @@
+.wrapper {
+  background: var(--dark-text);
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 8rem;
+  gap: 40px;
+}
+.custom-dating-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-dating-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.custom-dating-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.custom-dating-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+  pointer-events: none;
+}
+.bannerCondtent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+}
+.bannerCondtent p {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+.talkBtn {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--white-color);
+}
+.customList{
+    max-width: 700px;
+    line-height: 1.5;
+}
+.customList h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.customList p {
+    color: var(--subSecondary-text);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .benefitsList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--white-color); 
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .benefitsList svg {
+    flex-shrink: 0;
+    color: #00B42C; 
+    margin-top: 4px;
+    width: 24px;
+    height: 24px;
+  }
+  .benefitsList span {
+    color: var(--subSecondary-text);
+  }
+  .benefitsList strong {
+    margin-right: 4px;
+    font-weight: 600;
+    color: var(--white-color); 
+  }
+  
