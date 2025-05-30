@@ -1,0 +1,197 @@
+"use client";
+
+import React from "react";
+import Banner from "@/Components/webSite-dev-components/Banner";
+import ChooesTechnology from "@/Components/technology_page/ChooesTechnology";
+import TechnologyCards from "@/Components/technology_page/TechnologyCards";
+import ContactForm from "@/Components/technology_page/ContactForm";
+import { BiSolidPhoneCall, BiLogoLinkedin } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+import { TbBrandWhatsappFilled } from "react-icons/tb";
+import { SiYoutube } from "react-icons/si";
+
+const Technology = () => {
+  const bannerData = {
+    title: "A Look at Our Technologies Expertise",
+    description:
+      "Designing and developing innovative, professional software solutions for hundreds of companies across global tech markets for nearly two decades",
+    image1: "/assets/icons/shap.png",
+    image2: "/assets/icons/shape2.png",
+    buttonText: "Talk to us",
+    onButtonClick: () => alert("Let’s go!"),
+  };
+
+  const formFields = [
+    {
+      name: "name",
+      label: "Full Name",
+      type: "text",
+      placeholder: "Enter your name",
+      required: true,
+    },
+    {
+      name: "companyName",
+      label: "Company Name",
+      type: "text",
+      placeholder: "Enter company Name",
+      required: true,
+    },
+    {
+      name: "email",
+      label: "Email ID",
+      type: "email",
+      placeholder: "Enter email id",
+      required: true,
+    },
+    { name: "mobile", label: "Mobile Number", type: "phone", required: true },
+    {
+      name: "country",
+      label: "Country",
+      type: "select",
+      required: true,
+      options: [
+        { label: "India", value: "India" },
+        { label: "USA", value: "USA" },
+        { label: "UK", value: "UK" },
+      ],
+    },
+    {
+      name: "message",
+      label: "Message",
+      type: "textarea",
+      placeholder: "Your message here...",
+      required: true,
+    },
+  ];
+
+  const handleSubmit = (formData) => {
+    console.log("Form Submitted:", formData);
+  };
+
+  return (
+    <div style={{ backgroundColor: "#121723" }}>
+      <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        image1={bannerData.image1}
+        image2={bannerData.image2}
+        buttonText={bannerData.buttonText}
+        onButtonClick={bannerData.onButtonClick}
+      />
+
+      <ChooesTechnology />
+
+      <TechnologyCards />
+
+      <div style={{ position: "relative" }}>
+        <img
+          src="/assets/img/newbg.png"
+          style={{ position: "relative", width: "100%", height: "100%" }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: "5%",
+            padding: "0rem 8rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "50px",
+            width:"100%"
+          }}
+        >
+          <div
+            style={{
+              flex: "1",
+              width: "500px",
+              height: "auto",
+              backgroundColor: "black",
+              marginRight: "100px",
+              borderRadius: "10px",
+              border: "5px solid #3d3d3d",
+              padding: "2rem 3rem",
+              textAlign: "left",
+              boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+            }}
+          >
+            <h2 
+              style={{
+                fontSize: "30px",
+                marginBottom: "20px",
+              }}
+            >
+              Talk to our experts
+            </h2>
+            <p style={{ color: "#B5B0BC", lineHeight: 1.5 }}>
+              Elevate your journey and empower your choices with our experts'
+              insightful guidance.
+            </p>
+            <div
+              style={{
+                marginTop: "20px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+              }}
+            >
+              <p
+                style={{
+                  color: "#B5B0BC",
+                  lineHeight: 1.5,
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                {" "}
+                <strong style={{ color: "#fff", marginRight: "10px" }}>
+                  Call us at:
+                </strong>{" "}
+                <BiSolidPhoneCall
+                  style={{ color: "white", marginRight: "10px" }}
+                />{" "}
+                +91-9999999999
+              </p>
+              <p
+                style={{
+                  color: "#B5B0BC",
+                  lineHeight: 1.5,
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                {" "}
+                <strong style={{ color: "#fff", marginRight: "10px" }}>
+                  Email us at:
+                </strong>
+                <MdEmail style={{ color: "white", marginRight: "10px" }} />{" "}
+                abc@gmail.com
+              </p>
+            </div>
+
+            <div
+              style={{
+                fontSize: "30px",
+                display: "flex",
+                alignItems: "center",
+                gap: "30px",
+                marginTop:"30px",
+                // border:"2px solid red"
+
+              }}
+            >
+              <TbBrandWhatsappFilled /> <BiLogoLinkedin /> <SiYoutube />
+            </div>
+          </div>
+          <ContactForm
+            title="Get in Touch"
+            fields={formFields}
+            buttonText="Send Message"
+            onSubmit={handleSubmit}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Technology;

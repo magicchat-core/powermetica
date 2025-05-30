@@ -2,7 +2,7 @@
   "name": "powermetica",
   "version": "0.1.0",
   "private": true,
-"homepage": "https://magicchat-core.github.io/powermetica",
+  "homepage": "https://magicchat-core.github.io/powermetica",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "classnames": "^2.5.1",
     "next": "15.0.1",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "react-phone-input-2": "^2.15.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
