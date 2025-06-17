@@ -74,8 +74,13 @@
     font-size: 28px;
   }
   .tabButton{
-    padding: 20px 24px;
+    padding: 20px;
     font-weight: 500;
   }
-
+.tabPanel{
+  padding: 20px 0px;
+}
+.box-link {
+  padding: 14px 20px;
+}
 }
