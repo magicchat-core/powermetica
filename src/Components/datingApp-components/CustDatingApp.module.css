@@ -1,7 +1,5 @@
 .wrapper {
   background: var(--dark-text);
-  height: auto;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 3rem 8rem;
@@ -20,8 +18,7 @@
 }
 .custom-dating-banner img {
   width: 100%;
-  height: auto;
-  display: block;
+  /* height: auto; */
 }
 .custom-dating-banner::before {
   content: "";
@@ -105,5 +102,30 @@
     margin-right: 4px;
     font-weight: 600;
     color: var(--white-color); 
+  }
+  
+
+  @media (max-width: 768px) {
+    .wrapper {
+      padding: 3rem 0rem;
+    }
+   .custom-dating-list{
+    flex-direction: column;
+    padding: 0rem 1.5rem;
+   }
+   .custom-dating-list img {
+    width: 100%;
+    height: 400px;
+   }
+   .custom-dating-banner img{
+    height: 270px;
+   }
+   .bannerCondtent{
+    width: 75%;
+   }
+   .bannerCondtent h2{
+    font-size: 20px;
+   }
+    
   }
   
