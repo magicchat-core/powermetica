@@ -34,3 +34,12 @@
   gap: 40px;
   justify-content: space-between;
 }
+
+
+@media (max-width: 768px) {
+  .tabWrap {
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+  }
+
+}
