@@ -186,7 +186,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -200,9 +200,10 @@
     flex-direction: column;
     background: var(--bg_color);
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 998;
+    z-index: 1;
+    gap: 0.1rem;
   }
 
   .nav-items.showMobileMenu {
@@ -211,6 +212,7 @@
 
   .nav-item {
     width: 100%;
+    padding-left: 10px;
   }
 
   .nav-button {
