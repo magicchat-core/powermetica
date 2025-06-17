@@ -67,7 +67,7 @@ const datingAppDevelopment = () => {
         </div>
       </section>
 
-      <WhyChooseMagicChat/>
+      {/* <WhyChooseMagicChat/> */}
 
       <FAQ items={datingfaqItems} />
     </div>
