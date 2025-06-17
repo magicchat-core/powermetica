@@ -41,5 +41,16 @@
     padding: 3rem 1.5rem;
     flex-direction: column;
   }
-
+  .cardWrap{
+    padding: 3rem 1.5rem;
+  }
+  .cardsHeading h2 {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  .allCards{
+    gap: 20px;
+  }
 }
