@@ -28,29 +28,6 @@
   line-height: 28px;
   color: var(--subSecondary-text);
 }
-.cardWrap {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 8rem;
-  background: var(--dark-text);
-}
-.cardsHeading {
-  margin: auto;
-  text-align: center;
-  width: 100%;
-  max-width: 800px;
-}
-.cardsHeading h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-.description {
-  font-size: 1.25rem;
-  margin-bottom: 3.5rem;
-  line-height: 28px;
-  color: var(--subSecondary-text);
-}
 .allCards {
   display: flex;
   align-items: center;
@@ -69,4 +46,29 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .cardWrap {
+    padding: 3rem 1.5rem;
+  }
+  .cardsHeading h2 {
+    font-size: 28px;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+ .allCards{
+  flex-direction: column;
+ }
+ .allCards img {
+  display: none;
+ }
+ .firstCard, .remainingCards{
+  width: 100% ;
+ }
+ .remainingCards{
+  margin-top: 20px;
+ }
+
 }
