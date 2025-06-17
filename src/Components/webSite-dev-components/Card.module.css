@@ -74,5 +74,8 @@
   .icon {
     width: 48px;
   }
+  .iconWrapper{
+    width: 50%;
+  }
   
 }
