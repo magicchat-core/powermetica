@@ -89,23 +89,23 @@
   
   .nav-icons {
     display: flex;
-    gap: 2rem;
-    font-size: 1.2rem;
-    cursor: pointer;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
+    width: auto;
   }
   
   .searchWrapper {
     position: relative;
     display: flex;
     align-items: center;
+    height: 42px;
   }
   
   .searchInput {
     width: 200px;
     padding-left: 1.2rem;
-    padding-right: 40px; /* space for icon */
+    padding-right: 40px;
     font-size: 1rem;
     border-radius: 28px;
     outline: none;
@@ -114,12 +114,17 @@
     height: 42px;
     border: none;
     color: var(--white-color);
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto; 
   }
   
   .searchIcon {
-    cursor: pointer;
     font-size: 1.2rem;
-    transition: all 0.3s ease;
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -127,17 +132,47 @@
     align-items: center;
     justify-content: center;
     background-color: var(--dark-text);
-    position: absolute;
-    right: 4px;
-    top: 50%;
-    transform: translateY(-50%);
     color: var(--white-color);
-    pointer-events: auto; /* allow clicking */
+    cursor: pointer;
   }
   
   .insideInput {
     pointer-events: auto;
   }
+  .nav-icons span {
+    cursor: pointer;
+  }
+  .nav-icons svg {
+    transition: transform 0.3s ease;
+  }
+  .menuToggle {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 28px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .iconVisible {
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: auto;
+  }
+  
+  .iconHidden {
+    opacity: 0;
+    transform: rotate(90deg);
+    pointer-events: none;
+  }
+      
   
   @keyframes fadeIn {
     from {
@@ -149,11 +184,60 @@
       transform: translateY(0);
     }
   }
+
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .nav-items {
-      display: none; /* You can add a mobile menu later */
-    }
+  /* Hide nav-items initially on mobile */
+@media (max-width: 768px) {
+  .navbar{
+    padding: 1rem 2rem;
   }
-  
+  .nav-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background: var(--bg_color);
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 998;
+  }
+
+  .nav-items.showMobileMenu {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+  }
+
+  .dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdown-item {
+    background: transparent;
+    color: var(--white-color);
+    padding-left: 1.5rem;
+  }
+
+  .nav-icons {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .searchInput{
+    width: 300px;
+  }
+}
