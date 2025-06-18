@@ -108,5 +108,17 @@
     .cardGrid {
       grid-template-columns: 1fr;
     }
+    .techSection {
+      padding: 3rem 1.5rem;
+    }
+    .card{
+      flex-direction: column-reverse;
+    }
+    .image{
+      height: 200px;
+    }
+    .image img {
+      width: 200px;
+    }
   }
   
