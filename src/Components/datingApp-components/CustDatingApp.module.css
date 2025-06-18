@@ -129,3 +129,12 @@
     
   }
   
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 3rem 1.5rem;
+  }
+  .custom-dating-list img {
+    width: 400px;
+  }
+}

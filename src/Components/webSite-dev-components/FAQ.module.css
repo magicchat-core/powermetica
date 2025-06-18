@@ -101,3 +101,14 @@
     display: none;
   }
 }
+
+@media (max-width: 1024px) {
+  .faq_wrap {
+    padding: 0 1.5rem;
+    flex-direction: column-reverse;
+    padding-bottom: 3rem;
+  }
+  .faqContainer{
+    width: 100%;
+  }
+}

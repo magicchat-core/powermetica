@@ -72,3 +72,9 @@
  }
 
 }
+
+@media (max-width: 1024px) {
+  .cardWrap {
+    padding: 3rem 1.5rem;
+  }
+}
