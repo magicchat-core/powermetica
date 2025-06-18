@@ -102,15 +102,21 @@ export default function Navbar() {
                 {activeDropdown === item.label && (
                   <ul className={styles.dropdown}>
                     {item.subItems.map((sub) => (
-                      <li key={sub.slug} className={styles["dropdown-item"]}>
-                        {/* <Link
-                          href={`/${sub.slug}`}
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {sub.label}
-                        </Link> */}
-                        <Link href={`/${sub.slug}`}>{sub.label}</Link>
-                      </li>
+                      // <li key={sub.slug} className={styles["dropdown-item"]}>
+                      //   <Link href={`/${sub.slug}`}>{sub.label}</Link>
+                      // </li>
+
+                      <Link
+                        href={`/${sub.slug}`}
+                        key={sub.slug}
+                        className={styles["dropdown-link-wrapper"]}
+                        onClick={() => {
+                          setActiveDropdown(null); 
+                          setShowMobileMenu(false); 
+                        }}
+                      >
+                        <li className={styles["dropdown-item"]}>{sub.label}</li>
+                      </Link>
                     ))}
                   </ul>
                 )}

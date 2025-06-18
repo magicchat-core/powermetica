@@ -173,6 +173,21 @@
   pointer-events: none;
 }
 
+.nav-link-wrapper,
+.dropdown-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nav-link-wrapper:hover .nav-button,
+.dropdown-link-wrapper:hover .dropdown-item {
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  cursor: pointer;
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
