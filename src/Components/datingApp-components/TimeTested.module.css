@@ -156,3 +156,17 @@
   }
 
 }
+
+@media (max-width: 470px) {
+ .card-number{
+  font-size: 80px;
+ }
+.cardheading{
+  top: 30%;
+  font-size: 22px;
+}
+.cardDesc p {
+  padding-top: 25px;
+}
+
+}

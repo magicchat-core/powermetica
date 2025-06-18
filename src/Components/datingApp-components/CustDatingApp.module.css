@@ -138,3 +138,9 @@
     width: 400px;
   }
 }
+
+@media (max-width: 470px) {
+  .custom-dating-list img {
+    width: 360px;
+  }
+}

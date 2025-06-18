@@ -265,3 +265,9 @@
   }
 
 }
+
+@media (max-width: 470px) {
+  .searchInput {
+    width: 200px;
+  }
+}

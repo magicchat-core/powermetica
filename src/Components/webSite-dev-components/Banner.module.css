@@ -100,7 +100,11 @@
 
 @media (max-width: 470px) {
   .banner {
-    padding: 3rem;
-    height: 700px;
+    padding: 1rem;
+    height: 630px;
   }
+  /* .title {
+    font-size: 1.8rem;
+    border: 2px solid red;
+  } */
 }

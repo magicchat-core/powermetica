@@ -141,3 +141,17 @@
   }
 
 }
+
+
+@media (max-width: 470px) {
+  .form {
+    padding: 2rem 1.5rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .bgImage{
+    height: 2000px;
+  }
+
+}

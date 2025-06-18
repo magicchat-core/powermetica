@@ -64,3 +64,11 @@
     padding: 3rem 1.5rem;
   }
 }
+
+@media (max-width: 470px) {
+  .tabWrap {
+    padding: 3rem 1rem;
+    flex-direction: column;
+  }
+
+}

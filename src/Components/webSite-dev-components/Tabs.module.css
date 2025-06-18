@@ -97,3 +97,15 @@
   }
 
 }
+
+
+@media (max-width: 470px) {
+  .tabButton{
+    padding: 10px 8px;
+    font-weight: 500;
+  }
+.imageWrapper img{
+    width: 350px;
+  }
+
+}
