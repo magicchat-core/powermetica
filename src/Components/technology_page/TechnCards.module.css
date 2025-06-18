@@ -122,3 +122,9 @@
     }
   }
   
+
+  @media (max-width: 1024px) {
+    .techSection {
+      padding: 3rem 1.5rem;
+    }
+  }
