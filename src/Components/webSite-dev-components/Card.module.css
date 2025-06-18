@@ -33,8 +33,8 @@
 }
 
 .iconBackground {
-  position: relative; 
-  width: 80px; 
+  position: relative;
+  width: 80px;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -42,11 +42,10 @@
 }
 
 .icon {
-  position: absolute; 
+  position: absolute;
   top: 40%;
   left: 15%;
-  transform: translate(-50%, -50%); 
-  font-size: 3rem;
+  transform: translate(-50%, -50%);
   color: var(--white-color);
   z-index: 1;
 }
@@ -55,15 +54,28 @@
   transform: scale(8);
 }
 
-
 @media (max-width: 1024px) {
   .card {
     flex: 1 1 calc((100% - 40px) / 2);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .card {
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
   }
+  .title {
+    font-size: 20px;
+    margin: 10px auto;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .icon {
+    width: 48px;
+  }
+  .iconWrapper{
+    width: 50%;
+  }
+  
 }

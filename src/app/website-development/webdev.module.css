@@ -34,3 +34,41 @@
   gap: 40px;
   justify-content: space-between;
 }
+
+
+@media (max-width: 768px) {
+  .tabWrap {
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+  }
+  .cardWrap{
+    padding: 3rem 1.5rem;
+  }
+  .cardsHeading h2 {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  .allCards{
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tabWrap {
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+  }
+  .cardWrap{
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .tabWrap {
+    padding: 3rem 1rem;
+    flex-direction: column;
+  }
+
+}

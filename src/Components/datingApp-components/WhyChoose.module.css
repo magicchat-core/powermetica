@@ -1,6 +1,4 @@
 .wrapper {
-  width: 100%;
-  height: auto;
   padding: 3rem 8rem;
   text-align: center;
 }
@@ -37,57 +35,123 @@
   position: relative;
 }
 .verticalDivider {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: var(--sub-gradient);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--sub-gradient);
 }
 .verticalDivider {
-  left: 40.00%;
+  left: 40%;
 }
- .image{
-    width: 35%;
-    height: 300px;
- }
+.image {
+  width: 35%;
+  height: 300px;
+}
 .image img {
-    width: 100%;
-    border-radius: 10px;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
 }
-.cards{
-    width: 55%;
+.cards {
+  width: 55%;
 }
-.row1{
-    gap: 40px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+.row1 {
+  gap: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.box{
-    border-top: 5px solid var(--secondary-color);
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding-top: 30px;
+.box {
+  border-top: 5px solid var(--secondary-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 30px;
 }
-.icon img{
-    width: 70px;
-    height: 70px;
-    color: var(--secondary-color);
+.icon img {
+  width: 70px;
+  height: 70px;
+  color: var(--secondary-color);
 }
-.contnet{
-    text-align: left;
-    width: 300px;
+.contnet {
+  text-align: left;
+  width: 300px;
 }
-.cardheading{
-    font-size: 20px;
-    margin-bottom: 20px;
+.cardheading {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
-.contnet p{
-    font-size: 20px;
+.contnet p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--subSecondary-text);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 3rem 1.5rem;
+  }
+  .heading h2 {
+    font-size: 28px;
+  }
+  .cardWrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .verticalDivider {
+    display: none;
+  }
+  .image,
+  .cards {
+    width: 100%;
+  }
+  .icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .cardheading {
+    max-width: 200px;
     line-height: 1.5;
-    color: var(--subSecondary-text);
+  }
+  .box {
+    width: 42%;
+  }
+  .row1 {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 470px) {
+ .row1{
+  flex-direction: column;
+ }
+ .box {
+  width: 100%;
+ }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 3rem 1.5rem;
+  }
+  .cardWrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .verticalDivider {
+    display: none;
+  }
+  .image,
+  .cards {
+    width: 100%;
+  }
+  .icon img {
+    width: 40px;
+    height: 40px;
+  }
 }
