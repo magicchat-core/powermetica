@@ -151,6 +151,7 @@
   height: 28px;
   display: inline-block;
   cursor: pointer;
+  display: none;
 }
 
 .icon {
@@ -258,4 +259,9 @@
   .searchInput {
     width: 300px;
   }
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+  }
+
 }
