@@ -76,7 +76,14 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar} ref={navRef}>
-      <div className={styles.logo}>Logo</div>
+      <div className={styles.logo}>
+    <img
+      src="/assets/img/logos.png"
+      alt="Powermetic Logo"
+      className={styles.logoIcon}
+    />
+    <h2>Powermetic</h2>
+  </div>
 
       <ul
         className={`${styles["nav-items"]} ${
@@ -111,8 +118,8 @@ export default function Navbar() {
                         key={sub.slug}
                         className={styles["dropdown-link-wrapper"]}
                         onClick={() => {
-                          setActiveDropdown(null); 
-                          setShowMobileMenu(false); 
+                          setActiveDropdown(null);
+                          setShowMobileMenu(false);
                         }}
                       >
                         <li className={styles["dropdown-item"]}>{sub.label}</li>
