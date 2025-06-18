@@ -74,7 +74,7 @@
     font-size: 28px;
   }
   .tabButton{
-    padding: 20px;
+    padding: 20px 50px;
     font-weight: 500;
   }
 .tabPanel{
@@ -83,4 +83,17 @@
 .box-link {
   padding: 14px 20px;
 }
+}
+
+
+
+@media (max-width: 1024px) {
+  .tabList {
+    width: 100%;
+  }
+  .tabsContainer {
+    width: 100%;
+    max-width: 900px;
+  }
+
 }
