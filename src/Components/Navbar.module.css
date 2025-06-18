@@ -292,4 +292,7 @@
   .searchInput {
     width: 200px;
   }
+  .logo h2 {
+    display: none;
+  }
 }
