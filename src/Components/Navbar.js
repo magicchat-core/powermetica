@@ -82,7 +82,7 @@ export default function Navbar() {
       alt="Powermetic Logo"
       className={styles.logoIcon}
     />
-    <h2>Powermetic</h2>
+    <h2>Powermetica</h2>
   </div>
 
       <ul
