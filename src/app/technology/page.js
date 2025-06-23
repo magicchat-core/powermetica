@@ -9,6 +9,7 @@ import { BiSolidPhoneCall, BiLogoLinkedin } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 import { SiYoutube } from "react-icons/si";
+import styles from "./technology.module.css";
 
 const Technology = () => {
   const bannerData = {
@@ -83,102 +84,30 @@ const Technology = () => {
 
       <TechnologyCards />
 
-      <div style={{ position: "relative" }}>
-        <img
-          src="/assets/img/newbg.png"
-          style={{ position: "relative", width: "100%", height: "100%" }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            top: "5%",
-            padding: "0rem 8rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "50px",
-            width:"100%"
-          }}
-        >
-          <div
-            style={{
-              flex: "1",
-              width: "500px",
-              height: "auto",
-              backgroundColor: "black",
-              marginRight: "100px",
-              borderRadius: "10px",
-              border: "5px solid #3d3d3d",
-              padding: "2rem 3rem",
-              textAlign: "left",
-              boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-            }}
-          >
-            <h2 
-              style={{
-                fontSize: "30px",
-                marginBottom: "20px",
-              }}
-            >
-              Talk to our experts
-            </h2>
-            <p style={{ color: "#B5B0BC", lineHeight: 1.5 }}>
+      <div className={styles.addresswrapper}>
+        <img src="/assets/img/newbg.png" className={styles.bgImage} />
+        <div className={styles.absoluteContainer}>
+          <div className={styles.infoCard}>
+            <h2>Talk to our experts</h2>
+            <p>
               Elevate your journey and empower your choices with our experts'
               insightful guidance.
             </p>
-            <div
-              style={{
-                marginTop: "20px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-              }}
-            >
-              <p
-                style={{
-                  color: "#B5B0BC",
-                  lineHeight: 1.5,
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
+            <div className={styles.contactLine}>
+              <p>
                 {" "}
-                <strong style={{ color: "#fff", marginRight: "10px" }}>
-                  Call us at:
-                </strong>{" "}
-                <BiSolidPhoneCall
-                  style={{ color: "white", marginRight: "10px" }}
-                />{" "}
-                +91-9999999999
+                <strong>Call us at:</strong>{" "}
+                <BiSolidPhoneCall className={styles.icon} /> +91-9999999999
               </p>
-              <p
-                style={{
-                  color: "#B5B0BC",
-                  lineHeight: 1.5,
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
+
+              <p>
                 {" "}
-                <strong style={{ color: "#fff", marginRight: "10px" }}>
-                  Email us at:
-                </strong>
-                <MdEmail style={{ color: "white", marginRight: "10px" }} />{" "}
-                abc@gmail.com
+                <strong>Email us at:</strong>
+                <MdEmail className={styles.icon} /> abc@gmail.com
               </p>
             </div>
 
-            <div
-              style={{
-                fontSize: "30px",
-                display: "flex",
-                alignItems: "center",
-                gap: "30px",
-                marginTop:"30px",
-                // border:"2px solid red"
-
-              }}
-            >
+            <div className={styles.socialIcons}>
               <TbBrandWhatsappFilled /> <BiLogoLinkedin /> <SiYoutube />
             </div>
           </div>

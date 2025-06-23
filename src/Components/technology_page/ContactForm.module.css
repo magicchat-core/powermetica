@@ -132,3 +132,26 @@
   box-shadow: none !important;
   outline: none !important;
 }
+
+@media (max-width: 1024px) {
+  .form {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: rgba(255, 255, 255, 0.329) 0px 2px 25px;
+  }
+
+}
+
+
+@media (max-width: 470px) {
+  .form {
+    padding: 2rem 1.5rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .bgImage{
+    height: 2000px;
+  }
+
+}

@@ -107,3 +107,28 @@
     color: var(--white-color); 
   }
   
+
+  @media (max-width: 768px) {
+    .wrapper {
+      padding: 3rem 1.5rem;
+    }
+    .custom-dating-list {
+      flex-direction: column-reverse;
+    }
+  
+  }
+
+
+  @media (max-width: 1024px) {
+    .wrapper {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .custom-dating-list img{
+     width: 360px;
+    }
+
+  }
+ 

@@ -2,21 +2,25 @@ import styles from "./WhyChoose.module.css";
 
 const chooseList = [
   {
+    id: 1,
     title: "User-Centric UI/UX Design",
     text: "Seamless and engaging user experience.",
     svgSrc: "/assets/icons/uiux.svg",
   },
   {
+    id: 2,
     title: "Data Security & Compliance",
     text: "End-to-end encryption, GDPR, and CCPA compliance.",
     svgSrc: "/assets/icons/security.svg",
   },
   {
+    id: 3,
     title: "Scalability & Future-Readiness",
     text: "Apps designed to grow with your business.",
     svgSrc: "/assets/icons/scal.svg",
   },
   {
+    id: 4,
     title: "Expert Developers",
     text: "Skilled in iOS, Android, and cross-platform development.",
     svgSrc: "/assets/icons/develpoer.svg",
@@ -48,8 +52,8 @@ export default function WhyChooseMagicChat() {
 
         <div className={styles.cards}>
           <div className={styles.row1}>
-            {chooseList.slice(0, 2).map(({ title, text, svgSrc }) => (
-              <div className={styles.box} style={{ marginBottom: "50px" }}>
+            {chooseList.slice(0, 2).map(({id, title, text, svgSrc }) => (
+              <div key={id} className={styles.box} style={{ marginBottom: "50px" }}>
                 <div className={styles.icon}>
                   <img src={svgSrc} />
                 </div>
@@ -63,8 +67,8 @@ export default function WhyChooseMagicChat() {
           </div>
 
           <div className={styles.row1}>
-            {chooseList.slice(2, 4).map(({ title, text, svgSrc }) => (
-              <div className={styles.box}>
+            {chooseList.slice(2, 4).map(({id, title, text, svgSrc }) => (
+              <div key={id} className={styles.box}>
                 <div className={styles.icon}>
                   <img src={svgSrc} />
                 </div>

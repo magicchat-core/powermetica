@@ -69,7 +69,7 @@
 .answer {
   overflow: hidden;
   font-size: 16px;
-  color: var(--white-color);
+  color: var(--subSecondary-text);
   line-height: 1.5;
   max-height: 0;
   transition: max-height 0.35s ease, padding 0.35s ease, margin 0.35s ease;
@@ -77,4 +77,38 @@
   margin-top: 0;
   background: #1e232e;
   border-radius: 0 0 8px 8px;
+}
+
+
+@media (max-width: 768px) {
+  .faq_wrap {
+    padding: 0 1.5rem;
+    flex-direction: column-reverse;
+    padding-bottom: 3rem;
+  }
+  .faqContainer{
+    width: 100%;
+  }
+  .faqContainer p {
+    font-size: 24px;
+    text-align: center;
+  }
+  .question{
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .imageWrapper{
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .faq_wrap {
+    padding: 0 1.5rem;
+    flex-direction: column-reverse;
+    padding-bottom: 3rem;
+  }
+  .faqContainer{
+    width: 100%;
+  }
 }

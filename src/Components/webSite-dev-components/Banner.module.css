@@ -78,6 +78,7 @@
 @media (max-width: 768px) {
   .banner {
     padding: 3rem;
+    height: 600px;
   }
 
   .title {
@@ -87,11 +88,23 @@
   .description {
     font-size: 1rem;
   }
-  .imageWrapper1,
-  .imageWrapper2 {
-    max-width: 320px;
+  .imageWrapper1{
+    opacity: 0.5;
   }
   .imageWrapper2{
-    display: none;
+    opacity: 0.3;
+    left: -10%;
   }
+}
+
+
+@media (max-width: 470px) {
+  .banner {
+    padding: 1rem;
+    height: 630px;
+  }
+  /* .title {
+    font-size: 1.8rem;
+    border: 2px solid red;
+  } */
 }
