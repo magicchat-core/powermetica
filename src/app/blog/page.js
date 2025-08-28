@@ -6,15 +6,17 @@ import styles from "./blog.module.css";
 const Blog = () => {
   const blogPosts = [
     {
+      id: "future-ai-web-development",
       title: "The Future of AI in Web Development",
       excerpt: "Exploring how artificial intelligence is transforming the way we build and interact with web applications.",
       date: "March 15, 2024",
-      author: "Reetu Singh",
+      author: "Deepak Singh",
       category: "AI & Machine Learning",
       readTime: "5 min read",
       image: "/assets/img/blog1.jpg"
     },
     {
+      id: "react-performance-optimization",
       title: "Best Practices for React Performance Optimization",
       excerpt: "Learn practical techniques to improve your React application's performance and user experience.",
       date: "March 10, 2024",
@@ -24,6 +26,7 @@ const Blog = () => {
       image: "/assets/img/blog2.jpg"
     },
     {
+      id: "microservices-architecture",
       title: "Building Scalable Microservices Architecture",
       excerpt: "A comprehensive guide to designing and implementing microservices that can scale with your business.",
       date: "March 5, 2024",
@@ -33,6 +36,7 @@ const Blog = () => {
       image: "/assets/img/blog3.jpg"
     },
     {
+      id: "web3-blockchain-development",
       title: "The Rise of Web3 and Blockchain Development",
       excerpt: "Understanding how blockchain technology and Web3 are creating new opportunities for developers.",
       date: "February 28, 2024",
@@ -42,6 +46,7 @@ const Blog = () => {
       image: "/assets/img/blog4.jpg"
     },
     {
+      id: "mobile-first-design-2024",
       title: "Mobile-First Design: Why It Matters in 2024",
       excerpt: "Why adopting a mobile-first approach is crucial for modern web design and development.",
       date: "February 22, 2024",
@@ -51,6 +56,7 @@ const Blog = () => {
       image: "/assets/img/blog5.jpg"
     },
     {
+      id: "devops-best-practices",
       title: "DevOps Best Practices for Small Teams",
       excerpt: "How small development teams can implement DevOps practices to improve efficiency and delivery.",
       date: "February 18, 2024",
@@ -120,7 +126,9 @@ const Blog = () => {
                   <span className={styles.readTime}>{post.readTime}</span>
                 </div>
 
-                <button className={styles.readMoreButton}>Read More</button>
+                <a href={`/blog/posts/${post.id}`} className={styles.readMoreButton}>
+                  Read More
+                </a>
               </div>
             </article>
           ))}

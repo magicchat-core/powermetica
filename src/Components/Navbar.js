@@ -5,6 +5,7 @@ import styles from './Navbar.module.css';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
     { name: 'Website Development', path: '/services/website-development' },
@@ -27,13 +28,34 @@ const Navbar = () => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <img src="/assets/img/logo.png" alt="Company Logo" height={40} />
       </div>
       
-      <ul className={styles.navItems}>
+      {/* Hamburger Menu Button */}
+      <button 
+        className={styles.menuToggle}
+        onClick={toggleMobileMenu}
+        aria-label="Toggle menu"
+      >
+        <span className={mobileMenuOpen ? styles.open : ''}></span>
+        <span className={mobileMenuOpen ? styles.open : ''}></span>
+        <span className={mobileMenuOpen ? styles.open : ''}></span>
+      </button>
+
+      {/* Navigation Items */}
+      <ul className={`${styles.navItems} ${mobileMenuOpen ? styles.active : ''}`}>
         <li className={styles.navItem}>
           <button 
             className={styles.navButton}
@@ -41,15 +63,18 @@ const Navbar = () => {
           >
             Services <span className={styles.caret}>▼</span>
           </button>
-          {activeDropdown === 'services' && (
-            <div className={styles.dropdown}>
-              {services.map((service, index) => (
-                <a key={index} href={service.path} className={styles.dropdownItem}>
-                  {service.name}
-                </a>
-              ))}
-            </div>
-          )}
+          <div className={`${styles.dropdown} ${activeDropdown === 'services' ? styles.active : ''}`}>
+            {services.map((service, index) => (
+              <a 
+                key={index} 
+                href={service.path} 
+                className={styles.dropdownItem}
+                onClick={closeMobileMenu}
+              >
+                {service.name}
+              </a>
+            ))}
+          </div>
         </li>
         
         <li className={styles.navItem}>
@@ -59,37 +84,45 @@ const Navbar = () => {
           >
             Technology <span className={styles.caret}>▼</span>
           </button>
-          {activeDropdown === 'technology' && (
-            <div className={styles.dropdown}>
-              {technologies.map((tech, index) => (
-                <a key={index} href={tech.path} className={styles.dropdownItem}>
-                  {tech.name}
-                </a>
-              ))}
-            </div>
-          )}
+          <div className={`${styles.dropdown} ${activeDropdown === 'technology' ? styles.active : ''}`}>
+            {technologies.map((tech, index) => (
+              <a 
+                key={index} 
+                href={tech.path} 
+                className={styles.dropdownItem}
+                onClick={closeMobileMenu}
+              >
+                {tech.name}
+              </a>
+            ))}
+          </div>
         </li>
         
         <li className={styles.navItem}>
-          <a href="/case-studies" className={styles.navButton}>Case Studies</a>
+          <a href="/case-studies" className={styles.navButton} onClick={closeMobileMenu}>Case Studies</a>
         </li>
         
         <li className={styles.navItem}>
-          <a href="/blog" className={styles.navButton}>Blog</a>
+          <a href="/blog" className={styles.navButton} onClick={closeMobileMenu}>Blog</a>
         </li>
         
         <li className={styles.navItem}>
-          <a href="/about" className={styles.navButton}>About</a>
+          <a href="/about" className={styles.navButton} onClick={closeMobileMenu}>About</a>
         </li>
         
         <li className={styles.navItem}>
-          <a href="/contact" className={styles.navButton}>Contact</a>
+          <a href="/contact" className={styles.navButton} onClick={closeMobileMenu}>Contact</a>
         </li>
       </ul>
       
       <div className={styles.navIcons}>
         <button className={styles.contactButton}>Get Quote</button>
       </div>
+
+      {/* Overlay for mobile menu */}
+      {mobileMenuOpen && (
+        <div className={styles.overlay} onClick={closeMobileMenu}></div>
+      )}
     </nav>
   );
 };
