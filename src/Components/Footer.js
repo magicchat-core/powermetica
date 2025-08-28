@@ -114,7 +114,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className={styles.bottomBar}>
         <p className={styles.copyright}>
-          © {currentYear} Your Company Name. All rights reserved.
+          © {currentYear} Powermetica Softwares Pvt Ltd. All rights reserved.
         </p>
         <div className={styles.legalLinks}>
           <a href="/privacy" className={styles.legalLink}>Privacy Policy</a>
