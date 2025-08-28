@@ -1,0 +1,22 @@
+.pageWrap {
+  background-color: #121723;
+  padding: 40px;
+  color: white;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.image {
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+}
