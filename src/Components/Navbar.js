@@ -1,186 +1,97 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { FiSearch } from "react-icons/fi";
-import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
-import { FaAngleDown } from "react-icons/fa6";
-import Link from "next/link";
-import styles from "./Navbar.module.css";
+import React, { useState } from 'react';
+import styles from './Navbar.module.css';
 
-export default function Navbar() {
+const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [showSearch, setShowSearch] = useState(false);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const navRef = useRef(null);
 
-  const navItems = [
-    { label: "Home", slug: "" },
-    {
-      label: "Services",
-      subItems: [
-        { label: "Mobile App Development", slug: "mobilea-app-development" },
-        { label: "Website Development", slug: "website-development" },
-        { label: "eCommerce Solutions", slug: "ecommerce-solutions" },
-        { label: "Software Development", slug: "software-development" },
-        { label: "UI/UX Design", slug: "ui-ux-design" },
-        { label: "Digital Marketing", slug: "digital-marketing" },
-      ],
-    },
-    {
-      label: "Industries",
-      subItems: [
-        { label: "Dating App Development", slug: "dating-app-development" },
-        {
-          label: "E-commerce App Development",
-          slug: "ecommerce-app-development",
-        },
-        {
-          label: "Grocery Delivery App Development",
-          slug: "grocery-delivery-app-development",
-        },
-        {
-          label: "EducationTech Software Development",
-          slug: "educationtech-software-development",
-        },
-        {
-          label: "Financial Services Software Solutions",
-          slug: "financial-services-software-solutions",
-        },
-        { label: "Healthcare", slug: "healthcare" },
-      ],
-    },
-    {
-      label: "Technologies",
-      subItems: [
-        { label: "Technologies", slug: "technology" },
-        { label: "Events", slug: "events" },
-      ],
-    },
+  const services = [
+    { name: 'Website Development', path: '/services/website-development' },
+    { name: 'Mobile App Development', path: '/services/mobile-app-development' },
+    { name: 'AI/ML Development', path: '/services/ai-ml-development' },
+    { name: 'Cloud & DevOps', path: '/services/cloud-devops' },
+    { name: 'UI/UX Design', path: '/services/ui-ux-design' },
+    { name: 'Quality Assurance', path: '/services/quality-assurance' },
+    { name: 'Digital Marketing', path: '/services/digital-marketing' },
   ];
 
-  const toggleDropdown = (label) => {
-    setActiveDropdown((prev) => (prev === label ? null : label));
+  const technologies = [
+    { name: 'AI/ML Technologies', path: '/technology/ai-ml' },
+    { name: 'Frontend Technologies', path: '/technology/frontend' },
+    { name: 'Backend Technologies', path: '/technology/backend' },
+    { name: 'Mobile Technologies', path: '/technology/mobile' },
+  ];
+
+  const toggleDropdown = (dropdownName) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navRef.current && !navRef.current.contains(event.target)) {
-        setActiveDropdown(null);
-        setShowSearch(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   return (
-    <nav className={styles.navbar} ref={navRef}>
+    <nav className={styles.navbar}>
       <div className={styles.logo}>
-    <img
-      src="/assets/img/logos.png"
-      alt="Powermetic Logo"
-      className={styles.logoIcon}
-    />
-    <h2>Powermetica</h2>
-  </div>
-
-      <ul
-        className={`${styles["nav-items"]} ${
-          showMobileMenu ? styles.showMobileMenu : ""
-        }`}
-      >
-        {navItems.map((item) => (
-          <li key={item.label} className={styles["nav-item"]}>
-            {item.subItems ? (
-              <>
-                <button
-                  className={styles["nav-button"]}
-                  onClick={() => toggleDropdown(item.label)}
-                  aria-expanded={activeDropdown === item.label}
-                  aria-haspopup="true"
-                >
-                  {item.label}
-                  <span className={styles.caret}>
-                    <FaAngleDown />
-                  </span>
-                </button>
-
-                {activeDropdown === item.label && (
-                  <ul className={styles.dropdown}>
-                    {item.subItems.map((sub) => (
-                      // <li key={sub.slug} className={styles["dropdown-item"]}>
-                      //   <Link href={`/${sub.slug}`}>{sub.label}</Link>
-                      // </li>
-
-                      <Link
-                        href={`/${sub.slug}`}
-                        key={sub.slug}
-                        className={styles["dropdown-link-wrapper"]}
-                        onClick={() => {
-                          setActiveDropdown(null);
-                          setShowMobileMenu(false);
-                        }}
-                      >
-                        <li className={styles["dropdown-item"]}>{sub.label}</li>
-                      </Link>
-                    ))}
-                  </ul>
-                )}
-              </>
-            ) : (
-              <Link href={`/${item.slug}`} className={styles["nav-button"]}>
-                {item.label}
-              </Link>
-            )}
-          </li>
-        ))}
-      </ul>
-
-      <div className={styles["nav-icons"]}>
-        <div className={styles.searchWrapper}>
-          {showSearch && (
-            <input
-              type="text"
-              placeholder="Search..."
-              className={styles.searchInput}
-              autoFocus
-            />
-          )}
-          <span
-            className={`${styles.searchIcon} ${
-              showSearch ? styles.insideInput : ""
-            }`}
-            onClick={() => setShowSearch((prev) => !prev)}
-            aria-label="Toggle Search"
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                setShowSearch((prev) => !prev);
-              }
-            }}
+        <img src="/assets/img/logo.png" alt="Company Logo" height={40} />
+      </div>
+      
+      <ul className={styles.navItems}>
+        <li className={styles.navItem}>
+          <button 
+            className={styles.navButton}
+            onClick={() => toggleDropdown('services')}
           >
-            <FiSearch />
-          </span>
-        </div>
-
-        <div
-          className={styles.menuToggle}
-          onClick={() => setShowMobileMenu((prev) => !prev)}
-        >
-          <HiOutlineMenuAlt3
-            className={`${styles.icon} ${
-              showMobileMenu ? styles.iconHidden : styles.iconVisible
-            }`}
-          />
-          <HiOutlineX
-            className={`${styles.icon} ${
-              showMobileMenu ? styles.iconVisible : styles.iconHidden
-            }`}
-          />
-        </div>
+            Services <span className={styles.caret}>▼</span>
+          </button>
+          {activeDropdown === 'services' && (
+            <div className={styles.dropdown}>
+              {services.map((service, index) => (
+                <a key={index} href={service.path} className={styles.dropdownItem}>
+                  {service.name}
+                </a>
+              ))}
+            </div>
+          )}
+        </li>
+        
+        <li className={styles.navItem}>
+          <button 
+            className={styles.navButton}
+            onClick={() => toggleDropdown('technology')}
+          >
+            Technology <span className={styles.caret}>▼</span>
+          </button>
+          {activeDropdown === 'technology' && (
+            <div className={styles.dropdown}>
+              {technologies.map((tech, index) => (
+                <a key={index} href={tech.path} className={styles.dropdownItem}>
+                  {tech.name}
+                </a>
+              ))}
+            </div>
+          )}
+        </li>
+        
+        <li className={styles.navItem}>
+          <a href="/case-studies" className={styles.navButton}>Case Studies</a>
+        </li>
+        
+        <li className={styles.navItem}>
+          <a href="/blog" className={styles.navButton}>Blog</a>
+        </li>
+        
+        <li className={styles.navItem}>
+          <a href="/about" className={styles.navButton}>About</a>
+        </li>
+        
+        <li className={styles.navItem}>
+          <a href="/contact" className={styles.navButton}>Contact</a>
+        </li>
+      </ul>
+      
+      <div className={styles.navIcons}>
+        <button className={styles.contactButton}>Get Quote</button>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

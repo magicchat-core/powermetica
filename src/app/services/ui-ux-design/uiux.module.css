@@ -1,0 +1,213 @@
+.servicesSection {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0a0f1d 0%, #1a2438 100%);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionHeader p {
+  font-size: 1.2rem;
+  color: #b5b0bc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.serviceDescription {
+  color: #b5b0bc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.stepsList {
+  list-style: none;
+  padding: 0;
+}
+
+.stepsList li {
+  padding: 0.5rem 0;
+  color: #b5b0bc;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.stepsList li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.processSection {
+  padding: 6rem 2rem;
+  background: #0a0f1d;
+}
+
+.processTimeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.processTimeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary-gradient);
+}
+
+.processStep {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.processStep:nth-child(odd) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.processStep:nth-child(odd) .stepContent {
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.stepContent {
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.stepContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.stepContent p {
+  color: #b5b0bc;
+  line-height: 1.6;
+}
+
+.benefitsSection {
+  padding: 6rem 2rem;
+  background: #121723;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefitItem {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefitIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.benefitItem h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.benefitItem p {
+  color: #b5b0bc;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .processTimeline:before {
+    left: 30px;
+  }
+  
+  .processStep {
+    flex-direction: row !important;
+    text-align: left !important;
+  }
+  
+  .processStep .stepContent {
+    margin-right: 0 !important;
+    margin-left: 2rem !important;
+  }
+  
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+}
