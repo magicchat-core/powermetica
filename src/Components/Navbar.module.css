@@ -71,13 +71,14 @@
   left: 0;
   background-color: #1e293b;
   border-radius: 5px;
-  padding: 0.5rem 0;
+  padding: 0;
   min-width: 220px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.3s ease;
   z-index: 1001;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: none;
+
 }
 
 .dropdown.active {
@@ -86,11 +87,12 @@
 
 .dropdownItem {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   color: white;
   text-decoration: none;
   transition: background 0.3s ease;
   font-size: 0.9rem;
+  border-radius: 5px;
 }
 
 .dropdownItem:hover {
