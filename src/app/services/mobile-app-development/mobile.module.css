@@ -1,22 +1,103 @@
 .pageWrap {
   background-color: #121723;
-  padding: 40px;
-  color: white;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+
 }
 
 .heading {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .description {
-  max-width: 600px;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
   color: #ccc;
 }
 
 .image {
-  width: 300px;
-  height: auto;
-  margin-top: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Section Headers */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.sectionHeader p {
+  color: #aaa;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Services */
+.servicesSection {
+  padding: 3rem 8rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.serviceCard {
+  background: #1a1f2e;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+}
+
+.serviceIcon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Process Section */
+.processSection {
+  padding: 3rem 8rem;
+  background: #10141d;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.processStep {
+  background: #1a1f2e;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stepNumber {
+  font-size: 1.5rem;
+  background: #007bff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
