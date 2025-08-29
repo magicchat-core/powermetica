@@ -17,6 +17,10 @@ const Navbar = () => {
     { name: 'Digital Marketing', path: '/services/digital-marketing' },
   ];
 
+    const products = [
+    { name: 'Magicchat', path: 'https://magicchat.io' },
+  ];
+
   const technologies = [
     { name: 'AI/ML Technologies', path: '/technology/ai-ml' },
     { name: 'Frontend Technologies', path: '/technology/frontend' },
@@ -77,6 +81,29 @@ const Navbar = () => {
           </div>
         </li>
         
+         <li className={styles.navItem}>
+          <button 
+            className={styles.navButton}
+            onClick={() => toggleDropdown('product')}
+          >
+            Products <span className={styles.caret}>▼</span>
+          </button>
+          <div className={`${styles.dropdown} ${activeDropdown === 'products' ? styles.active : ''}`}>
+            {products.map((product, index) => (
+              <a 
+                key={index} 
+                href={product.path} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.dropdownItem}
+                onClick={closeMobileMenu}
+              >
+                {product.name}
+              </a>
+            ))}
+          </div>
+        </li>
+
         <li className={styles.navItem}>
           <button 
             className={styles.navButton}
