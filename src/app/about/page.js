@@ -103,19 +103,18 @@ const About = () => {
         <h2>Leadership Team</h2>
         <div className={styles.teamGrid}>
           <div className={styles.teamMember}>
-            <img src="/assets/img/team-member1.jpg" alt="Team Member" />
+            <img src="/assets/img/team-member1.jpg" alt="Deepak Singh" />
             <h3>Deepak Singh</h3>
-            <p>CTO & Founder</p>
+            <p>Co-Founder & CTO — Technology & Innovation Lead</p>
           </div>
           <div className={styles.teamMember}>
-            <img src="/assets/img/team-member2.jpg" alt="Team Member" />
+            <img src="/assets/img/team-member2.jpg" alt="Reetu Singh" />
             <h3>Reetu Singh</h3>
-            <p>CEO</p>
+            <p>Co-Founder & CEO — Creative & Finance Director</p>
           </div>
-
-
         </div>
       </section>
+
     </div>
   );
 };
