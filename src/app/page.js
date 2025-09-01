@@ -1,12 +1,11 @@
-'use client'
+"use client";
 
-import React from 'react';
-import styles from './home.module.css';
+import React from "react";
+import styles from "./home.module.css";
 import Script from "next/script";
 
 export default function Home() {
-
-    const handleMagicChatInit = async () => {
+  const handleMagicChatInit = async () => {
     await window.magicchat_io.setUp(
       "powermetica", // app_name
       "UG93ZXJtZXRpY2EgVGVhbV9fU0VQUkFUT1JfX3Bvd2VybWV0aWNh", // api_key
@@ -16,43 +15,45 @@ export default function Home() {
     await window.magicchat_io.initialize({ app_version: "V4" });
   };
 
-
   const services = [
     {
-      icon: '💻',
-      title: 'Web Development',
-      description: 'Responsive, SEO-optimized websites that convert visitors into customers',
-      link: '/services/website-development'
+      icon: "💻",
+      title: "Web Development",
+      description:
+        "Responsive, SEO-optimized websites that convert visitors into customers",
+      link: "/services/website-development",
     },
     {
-      icon: '📱',
-      title: 'Mobile Apps',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      link: '/services/mobile-app-development'
+      icon: "📱",
+      title: "Mobile Apps",
+      description:
+        "Native and cross-platform mobile applications for iOS and Android",
+      link: "/services/mobile-app-development",
     },
     {
-      icon: '🤖',
-      title: 'AI/ML Solutions',
-      description: 'Intelligent systems that learn, adapt, and automate your business processes',
-      link: '/services/ai-ml-development'
+      icon: "🤖",
+      title: "AI/ML Solutions",
+      description:
+        "Intelligent systems that learn, adapt, and automate your business processes",
+      link: "/services/ai-ml-development",
     },
     {
-      icon: '☁️',
-      title: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure and automated deployment pipelines',
-      link: '/services/cloud-devops'
-    }
+      icon: "☁️",
+      title: "Cloud & DevOps",
+      description:
+        "Scalable cloud infrastructure and automated deployment pipelines",
+      link: "/services/cloud-devops",
+    },
   ];
 
   const stats = [
-    { number: '200+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '15+', label: 'Expert Team Members' }
+    { number: "200+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "15+", label: "Expert Team Members" },
   ];
 
   return (
-
     <>
       {/* Load Socket.io */}
       <Script
@@ -70,14 +71,27 @@ export default function Home() {
         <section className={styles.heroSection}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <h1>Transform Your Vision Into <span className={styles.gradientText}>Digital Reality</span></h1>
+              <h1>
+                Transform Your Vision Into{" "}
+                <span className={styles.gradientText}>Digital Reality</span>
+              </h1>
               <p>
-                We craft exceptional digital experiences that drive growth and innovation.
-                From concept to deployment, we're your partners in digital transformation.
+                We craft exceptional digital experiences that drive growth and
+                innovation. From concept to deployment, we're your partners in
+                digital transformation.
               </p>
               <div className={styles.heroButtons}>
-                <button className={styles.primaryButton}>Start Your Project</button>
-                <button className={styles.secondaryButton}>View Our Work</button>
+                <a href="/start-project">
+                  <button className={styles.primaryButton}>
+                    Start Your Project
+                  </button>
+                </a>
+
+                <a href="/view-our-work">
+                  <button className={styles.secondaryButton}>
+                    View Our Work
+                  </button>
+                </a>
               </div>
             </div>
             <div className={styles.heroImage}>
@@ -109,7 +123,9 @@ export default function Home() {
         <section className={styles.servicesSection}>
           <div className={styles.sectionHeader}>
             <h2>Our Services</h2>
-            <p>Comprehensive digital solutions tailored to your business needs</p>
+            <p>
+              Comprehensive digital solutions tailored to your business needs
+            </p>
           </div>
           <div className={styles.servicesGrid}>
             {services.map((service, index) => (
@@ -135,7 +151,9 @@ export default function Home() {
                   <div className={styles.featureIcon}>⭐</div>
                   <div>
                     <h4>Expert Team</h4>
-                    <p>Seasoned professionals with years of industry experience</p>
+                    <p>
+                      Seasoned professionals with years of industry experience
+                    </p>
                   </div>
                 </div>
                 <div className={styles.featureItem}>
@@ -176,13 +194,21 @@ export default function Home() {
             <h2>Ready to Start Your Project?</h2>
             <p>Let's discuss your ideas and turn them into reality</p>
             <div className={styles.ctaButtons}>
-              <button className={styles.ctaPrimary}>Get Free Consultation</button>
-              <button className={styles.ctaSecondary}>View Case Studies</button>
+              <a href="/get-free-consultation">
+                <button className={styles.ctaPrimary}>
+                  Get Free Consultation
+                </button>
+              </a>
+
+              <a href="/case-studies">
+                <button className={styles.ctaSecondary}>
+                  View Case Studies
+                </button>
+              </a>
             </div>
           </div>
         </section>
       </div>
     </>
-
   );
 }
