@@ -8,21 +8,21 @@ const caseStudies = [
     title: "E-commerce Platform",
     description:
       "A scalable e-commerce solution with AI-driven recommendations.",
-    image: "/assets/img/work/ecommerce.png",
+    image: "/assets/img/e-commerce.png",
     link: "/case-studies/ecommerce",
   },
   {
     title: "Dating App",
     description:
       "A modern dating app built with real-time chat and smart matching.",
-    image: "/assets/img/work/dating.png",
+    image: "/assets/img/datingApp.png",
     link: "/case-studies/dating-app",
   },
   {
     title: "SaaS Dashboard",
     description:
       "An analytics dashboard with interactive charts and cloud integration.",
-    image: "/assets/img/work/dashboard.png",
+    image: "/assets/img/saasImg.png",
     link: "/case-studies/dashboard",
   },
 ];
@@ -47,7 +47,7 @@ const ViewOurWorkPage = () => {
             <div className={styles.content}>
               <h3 className={styles.cardTitle}>{work.title}</h3>
               <p className={styles.cardDesc}>{work.description}</p>
-              <a href={work.link} className={styles.link}>
+              <a href="/case-studies" className={styles.link}>
                 View Case Study →
               </a>
             </div>
