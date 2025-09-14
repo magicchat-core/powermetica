@@ -1,34 +1,37 @@
 "use client";
 
-import React from 'react';
-import styles from './Footer.module.css';
+import React from "react";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'Website Development', path: '/services/website-development' },
-    { name: 'Mobile App Development', path: '/services/mobile-app-development' },
-    { name: 'AI/ML Development', path: '/services/ai-ml-development' },
-    { name: 'Cloud & DevOps', path: '/services/cloud-devops' },
-    { name: 'UI/UX Design', path: '/services/ui-ux-design' },
-    { name: 'Quality Assurance', path: '/services/quality-assurance' },
-    { name: 'Digital Marketing', path: '/services/digital-marketing' },
+    { name: "Website Development", path: "/services/website-development" },
+    {
+      name: "Mobile App Development",
+      path: "/services/mobile-app-development",
+    },
+    { name: "AI/ML Development", path: "/services/ai-ml-development" },
+    { name: "Cloud & DevOps", path: "/services/cloud-devops" },
+    { name: "UI/UX Design", path: "/services/ui-ux-design" },
+    { name: "Quality Assurance", path: "/services/quality-assurance" },
+    { name: "Digital Marketing", path: "/services/digital-marketing" },
   ];
 
   const technologies = [
-    { name: 'AI/ML Technologies', path: '/technology/ai-ml' },
-    { name: 'Frontend Technologies', path: '/technology/frontend' },
-    { name: 'Backend Technologies', path: '/technology/backend' },
-    { name: 'Mobile Technologies', path: '/technology/mobile' },
+    { name: "AI/ML Technologies", path: "/technology/ai-ml" },
+    { name: "Frontend Technologies", path: "/technology/frontend" },
+    { name: "Backend Technologies", path: "/technology/backend" },
+    { name: "Mobile Technologies", path: "/technology/mobile" },
   ];
 
   const company = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: "About Us", path: "/about" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Blog", path: "/blog" },
+    { name: "Careers", path: "/careers" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   return (
@@ -43,15 +46,24 @@ export default function Footer() {
               className={styles.logo}
             />
             <p className={styles.description}>
-              Transforming ideas into innovative digital solutions. We specialize in
-              full-stack development, AI/ML, and cutting-edge technology services.
+              Transforming ideas into innovative digital solutions. We
+              specialize in full-stack development, AI/ML, and cutting-edge
+              technology services.
             </p>
           </div>
           <div className={styles.socialLinks}>
-            <a href="#" className={styles.socialLink}>📘</a>
-            <a href="#" className={styles.socialLink}>📱</a>
-            <a href="#" className={styles.socialLink}>💼</a>
-            <a href="#" className={styles.socialLink}>🎥</a>
+            <a href="#" className={styles.socialLink}>
+              📘
+            </a>
+            <a href="#" className={styles.socialLink}>
+              📱
+            </a>
+            <a href="#" className={styles.socialLink}>
+              💼
+            </a>
+            <a href="#" className={styles.socialLink}>
+              🎥
+            </a>
           </div>
         </div>
 
@@ -103,11 +115,15 @@ export default function Footer() {
           <div className={styles.contactInfo}>
             <p className={styles.contactItem}>📧 powermetica@gmail.com</p>
             <p className={styles.contactItem}>📞 +91 (798) 231-1249</p>
-            <p className={styles.contactItem}>📍 98, Sarvodaya Colony, Vijay Nagar, Ghaziabad - 201009, Uttar Pradesh, India</p>
+            <p className={styles.contactItem}>
+              📍 98, Sarvodaya Colony, Vijay Nagar, Ghaziabad - 201009, Uttar
+              Pradesh, India
+            </p>
           </div>
-          <button className={styles.quoteButton}>
-            Get Free Quote
-          </button>
+
+          <a href="/get-quote">
+            <button className={styles.quoteButton}>Get Free Quote</button>
+          </a>
         </div>
       </div>
 
@@ -117,9 +133,15 @@ export default function Footer() {
           © {currentYear} Powermetica Softwares Pvt Ltd. All rights reserved.
         </p>
         <div className={styles.legalLinks}>
-          <a href="/privacy" className={styles.legalLink}>Privacy Policy</a>
-          <a href="/terms" className={styles.legalLink}>Terms of Service</a>
-          <a href="/cookies" className={styles.legalLink}>Cookie Policy</a>
+          <a href="/privacy" className={styles.legalLink}>
+            Privacy Policy
+          </a>
+          <a href="/terms" className={styles.legalLink}>
+            Terms of Service
+          </a>
+          <a href="/cookies" className={styles.legalLink}>
+            Cookie Policy
+          </a>
         </div>
       </div>
     </footer>
