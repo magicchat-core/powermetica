@@ -12,7 +12,7 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-align: center;
-  color: white;
+  color: #ffffff;
 }
 
 .subtitle {
@@ -45,26 +45,46 @@
 .formGroup select,
 .formGroup textarea {
   padding: 0.8rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   background: #0f172a;
-  color: white;
+  color: #ffffff;
   font-size: 0.95rem;
   font-family: inherit;
   outline: none;
-  transition: border 0.3s ease;
+  transition: border 0.3s ease, background 0.3s ease;
 }
 
 .formGroup input:focus,
 .formGroup select:focus,
 .formGroup textarea:focus {
   border-color: var(--primary-color);
+  background: #1e293b;
+}
+
+/* ✅ File input styling */
+.formGroup input[type="file"] {
+  padding: 0.5rem;
+  cursor: pointer;
+  background: #0f172a;
+}
+.formGroup input[type="file"]::-webkit-file-upload-button {
+  padding: 0.4rem 0.8rem;
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.formGroup input[type="file"]::-webkit-file-upload-button:hover {
+  filter: brightness(1.1);
 }
 
 .submitButton {
   padding: 1rem;
   background: var(--primary-gradient);
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -75,4 +95,85 @@
 
 .submitButton:hover {
   transform: translateY(-2px);
+}
+
+/* ✅ Checkbox Group */
+.checkboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: #0f172a;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.checkboxLabel:hover {
+  background: #1e293b;
+  border-color: var(--primary-color);
+}
+
+.checkboxLabel input[type="checkbox"] {
+  accent-color: var(--primary-color); /* ✅ nice color in modern browsers */
+}
+
+/* ✅ Datetime input dedicated class */
+.inputDatetime {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #0f172a;
+  color: #ffffff;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+/* Layout helpers for StartProject page */
+.formSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 4rem 6rem;
+  gap: 40px;
+}
+
+.formWrapper {
+  flex: 1;
+  min-width: 300px;
+}
+
+.formIllustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formIllustration img {
+  max-width: 70%;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formSection {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .formIllustration img {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
 }

@@ -113,7 +113,7 @@ export default function Footer() {
         <div>
           <h3 className={styles.sectionTitle}>Get In Touch</h3>
           <div className={styles.contactInfo}>
-            <p className={styles.contactItem}>📧 powermetica@gmail.com</p>
+            <p className={styles.contactItem}>📧 help@powermetica.com</p>
             <p className={styles.contactItem}>📞 +91 (798) 231-1249</p>
             <p className={styles.contactItem}>
               📍 98, Sarvodaya Colony, Vijay Nagar, Ghaziabad - 201009, Uttar

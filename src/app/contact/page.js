@@ -38,8 +38,8 @@ const Contact = () => {
     {
       icon: "📧",
       title: "Email",
-      details: "powermetica@gmail.com",
-      link: "mailto:powermetica@gmail.com"
+      details: "help@powermetica.com",
+      link: "mailto:help@powermetica.com"
     },
     {
       icon: "📞",

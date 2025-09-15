@@ -1,3 +1,21 @@
+
+.formSection {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.formWrapper {
+  flex: 1;
+}
+
+/* Ensure image column still behaves well */
+.formIllustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .getQuotePage {
   color: white;
   /* padding: 2rem; */
