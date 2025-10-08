@@ -13,7 +13,7 @@ const StartProjectPage = () => {
     // ---- Build multipart/form-data ----
     const fd = new FormData();
     fd.append("email", formData.email);
-    fd.append("email_type", "FREE_CONSULTATION");
+    fd.append("email_type", "START_PROJECT");
     fd.append("to_pm", "to_pm");
     fd.append("services", JSON.stringify(formData.services || []));
     fd.append("name", formData.name);
@@ -52,7 +52,7 @@ const StartProjectPage = () => {
     <div className={styles.getQuotePage}>
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1>Get Your Free Quote</h1>
+          <h1>Get Your Free Consultation</h1>
           <p>Tell us about your project and attach any relevant file.</p>
         </div>
       </section>

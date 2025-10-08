@@ -71,9 +71,8 @@ const Navbar = () => {
             Services <span className={styles.caret}>▼</span>
           </button>
           <div
-            className={`${styles.dropdown} ${
-              activeDropdown === "services" ? styles.active : ""
-            }`}
+            className={`${styles.dropdown} ${activeDropdown === "services" ? styles.active : ""
+              }`}
           >
             {services.map((service, index) => (
               <a
@@ -96,9 +95,8 @@ const Navbar = () => {
             Products <span className={styles.caret}>▼</span>
           </button>
           <div
-            className={`${styles.dropdown} ${
-              activeDropdown === "products" ? styles.active : ""
-            }`}
+            className={`${styles.dropdown} ${activeDropdown === "products" ? styles.active : ""
+              }`}
           >
             {products.map((product, index) => (
               <a
@@ -123,9 +121,8 @@ const Navbar = () => {
             Technology <span className={styles.caret}>▼</span>
           </button>
           <div
-            className={`${styles.dropdown} ${
-              activeDropdown === "technology" ? styles.active : ""
-            }`}
+            className={`${styles.dropdown} ${activeDropdown === "technology" ? styles.active : ""
+              }`}
           >
             {technologies.map((tech, index) => (
               <a
@@ -182,9 +179,9 @@ const Navbar = () => {
       </ul>
 
       <div className={styles.navIcons}>
-        {/* <button className={styles.contactButton}>Get Quote</button> */}
-        <a href="/get-quote">
-          <button className={styles.contactButton}>Get Quote</button>
+        {/* <button className={styles.contactButton}>Get Free Consultation</button> */}
+        <a href="/free-consultation">
+          <button className={styles.contactButton}>Get Free Consultation</button>
         </a>
       </div>
 

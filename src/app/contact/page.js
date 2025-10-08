@@ -9,9 +9,10 @@ const Contact = () => {
     email: "",
     company: "",
     phone: "",
-    service: "",
     message: ""
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,18 +21,51 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      service: "",
-      message: ""
-    });
+
+    setIsSubmitting(true);
+
+    // ---- Build multipart/form-data ----
+    const fd = new FormData();
+    fd.append("email", formData.email);
+    fd.append("email_type", "GET_IN_TOUCH");
+    fd.append("to_pm", "to_pm");
+    fd.append("name", formData.name);
+    fd.append("phone", formData.phone);
+    fd.append("company", formData.company || "");
+    fd.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://email.magicchat.io/prod/send_email", {
+        method: "POST",
+        headers: {
+          "x-api-key": "justanything",
+          // ⚠️ Don't set Content-Type manually when using FormData
+        },
+        body: fd,
+      });
+
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+      const data = await response.json();
+      console.log("✅ Email sent successfully:", data);
+
+      alert("Thank you for your message! We'll get back to you soon.");
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("❌ Error sending email:", error);
+      alert("Something went wrong while sending your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -45,12 +79,13 @@ const Contact = () => {
       icon: "📞",
       title: "Phone",
       details: "+91 (798) 231-1249",
-      link: "tel:+15551234567"
+      link: "tel:+917982311249"
     },
     {
       icon: "📍",
       title: "Address",
-      details: "98, Sarvodaya Colony, Vijay Nagar, Ghaziabad - 201009, Uttar Pradesh, India",
+      details:
+        "98, Sarvodaya Colony, Vijay Nagar, Ghaziabad - 201009, Uttar Pradesh, India",
       link: "#"
     },
     {
@@ -130,25 +165,6 @@ const Contact = () => {
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="service">Service Interested In</label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                >
-                  <option value="">Select a service</option>
-                  <option value="web-development">Web Development</option>
-                  <option value="mobile-development">Mobile App Development</option>
-                  <option value="ai-ml">AI/ML Development</option>
-                  <option value="cloud-devops">Cloud & DevOps</option>
-                  <option value="ui-ux">UI/UX Design</option>
-                  <option value="qa">Quality Assurance</option>
-                  <option value="marketing">Digital Marketing</option>
-                </select>
-              </div>
-
-              <div className={styles.formGroup}>
                 <label htmlFor="message">Message *</label>
                 <textarea
                   id="message"
@@ -160,8 +176,12 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className={styles.submitButton}>
-                Send Message
+              <button
+                type="submit"
+                className={styles.submitButton}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
@@ -200,7 +220,10 @@ const Contact = () => {
         <div className={styles.mapPlaceholder}>
           <div className={styles.mapContent}>
             <p>📍 Map would be embedded here</p>
-            <p>98, Sarvodaya Colony, Vijay Nagar, Ghaziabad - 201009, Uttar Pradesh, India</p>
+            <p>
+              98, Sarvodaya Colony, Vijay Nagar, Ghaziabad - 201009, Uttar
+              Pradesh, India
+            </p>
           </div>
         </div>
       </section>

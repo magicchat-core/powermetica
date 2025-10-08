@@ -121,8 +121,8 @@ export default function Footer() {
             </p>
           </div>
 
-          <a href="/get-quote">
-            <button className={styles.quoteButton}>Get Free Quote</button>
+          <a href="/free-consultation">
+            <button className={styles.quoteButton}>Get Free Consultation</button>
           </a>
         </div>
       </div>
