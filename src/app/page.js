@@ -7,8 +7,8 @@ import Script from "next/script";
 export default function Home() {
   const handleMagicChatInit = async () => {
     await window.magicchat_io.setUp(
-      "powermetica", // app_name
-      "UG93ZXJtZXRpY2EgVGVhbV9fU0VQUkFUT1JfX3Bvd2VybWV0aWNh", // api_key
+      "powermetica_app", // app_name
+      "UG93ZXJtZXRpY2EgVGVhbV9fU0VQUkFUT1JfX3Bvd2VybWV0aWNhX2FwcA==", // api_key
       false // header_req (true by default)
     );
 
