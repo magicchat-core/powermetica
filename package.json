@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && echo 'www.powermetica.com' > out/CNAME && touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "deploy": "npm run build && echo 'powermetica.com' > out/CNAME && touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
