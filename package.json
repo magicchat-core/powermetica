@@ -8,14 +8,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && echo 'powermetica.com' > out/CNAME && touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "predeploy": "npm run build",
+    "deploy": "rm -rf out/.nojekyll && echo 'powermetica.com' > out/CNAME && touch out/.nojekyll && npx gh-pages --dist out --dotfiles --nojekyll"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "classnames": "^2.5.1",
-    "next": "15.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "^16.1.6",
+    "react": "^19.0.0-rc-de68d2f4-20241204",
+    "react-dom": "^19.0.0-rc-de68d2f4-20241204",
     "react-icons": "^5.5.0",
     "react-phone-input-2": "^2.15.1"
   },

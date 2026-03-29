@@ -7,9 +7,11 @@ import Script from "next/script";
 export default function Home() {
   const handleMagicChatInit = async () => {
     await window.magicchat_io.setUp(
-      "powermetica_app", // app_name
-      "UG93ZXJtZXRpY2EgVGVhbV9fU0VQUkFUT1JfX3Bvd2VybWV0aWNhX2FwcA==", // api_key
-      false // header_req (true by default)
+      "powermetica_support", // app_name
+      "cG93ZXJtZXRpY2FfX1NFUFJBVE9SX19wb3dlcm1ldGljYV9zdXBwb3J0", // api_key
+      "US",
+      "V1"
+      // false // header_req (true by default)
     );
 
     await window.magicchat_io.initialize({ app_version: "V4" });
@@ -56,16 +58,16 @@ export default function Home() {
   return (
     <>
       {/* Load Socket.io */}
-      {/* <Script
+      <Script
         src="https://cdn.socket.io/4.1.2/socket.io.min.js"
         strategy="beforeInteractive"
-      /> */}
+      />
       {/* Load Magicchat bundle */}
-      {/* <Script
+      <Script
         src="https://magicchat-core.github.io/prod-ssc-client-cdns/bundle.js"
         strategy="afterInteractive"
         onLoad={handleMagicChatInit}
-      /> */}
+      />
       <div className={styles.homePage}>
         {/* Hero Section */}
         <section className={styles.heroSection}>
