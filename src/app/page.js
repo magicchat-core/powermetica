@@ -62,11 +62,11 @@ export default function Home() {
         src="https://cdn.socket.io/4.1.2/socket.io.min.js"
         strategy="beforeInteractive"
       />
-      {/* Load Magicchat bundle */}
+  
       <Script
         src="https://magicchat-core.github.io/prod-ssc-client-cdns/bundle.js"
         strategy="afterInteractive"
-        onLoad={handleMagicChatInit}
+        // onLoad={handleMagicChatInit}
       />
       <div className={styles.homePage}>
         {/* Hero Section */}
