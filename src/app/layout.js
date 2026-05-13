@@ -3,8 +3,9 @@ import './globals.css';
 import Footer from '@/Components/Footer';
 
 export const metadata = {
-  title: 'Your Site Title',
-  description: 'Your Site Description',
+  title: 'Powermetica | AI Agents & Software Development',
+  description:
+    'We build AI agents, intelligent automation systems, SaaS platforms, chatbots, and custom software solutions for modern businesses.',
 };
 
 export default function RootLayout({ children }) {

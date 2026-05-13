@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: "Digital Marketing", path: "/services/digital-marketing" },
   ];
 
-  const products = [{ name: "Magicchat", path: "https://magicchat.io" }];
+  const products = [{ name: "GetHotelAi", path: "https://gethotelai.com" }];
 
   const technologies = [
     { name: "AI/ML Technologies", path: "/technology/ai-ml" },

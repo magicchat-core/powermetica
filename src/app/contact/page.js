@@ -38,7 +38,7 @@ const Contact = () => {
     fd.append("message", formData.message);
 
     try {
-      const response = await fetch("https://email.magicchat.io/prod/send_email", {
+      const response = await fetch("https://email2.magicchat.io/prod/send_email", {
         method: "POST",
         headers: {
           "x-api-key": "justanything",
